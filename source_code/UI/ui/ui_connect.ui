@@ -90,12 +90,12 @@
      <string>确定</string>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="textBrowser">
+   <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>102</x>
       <y>120</y>
-      <width>171</width>
+      <width>191</width>
       <height>21</height>
      </rect>
     </property>

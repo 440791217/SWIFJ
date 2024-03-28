@@ -44,6 +44,7 @@ class Connect(QDialog):
         filename, _ = QFileDialog.getOpenFileName(self, "Open File", "", "All Files (*)")
         if filename:
             print(f"Selected file: {filename}")
+            # self.m_ui.FileEdit.addItem(filename)
 
 
   
