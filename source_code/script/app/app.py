@@ -1,7 +1,7 @@
 import yaml
 import os
 from loguru import logger
-from source_code.script.utils import utils
+from source_code.gdb import cmdline
 
 class Application:
     uart={
