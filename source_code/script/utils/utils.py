@@ -3,6 +3,9 @@ import binascii
 def crc32(data):
     return binascii.crc32(data) & 0xffffffff
 
+def get_config_path():
+    return ''
+
 # def getCWD():
     # return 
 
