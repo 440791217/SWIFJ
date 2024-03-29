@@ -44,14 +44,15 @@ class SettingDialog(QDialog):
 
         self.m_ui.applyButton.clicked.connect(self.apply)#点击保存串口配置按钮
 
-        # self.fill_ports_parameters()#串口配置参数
+        self.fill_ports_parameters()#串口配置参数
         self.full_port_info()#获取端口号
 
 
     def apply(self):
         self.update_settings()   #更新m_currentSettings值
-        self.to_dict()           #将配置写成字典
-        self.save_to_json()
+        self.to_dict() 
+        file_path=utils.get_config_path()          #将配置写成字典
+        utils.save_to_json(self,file_path)
         self.hide() 
 
     def setting(self):
@@ -69,13 +70,13 @@ class SettingDialog(QDialog):
         self.m_ui.baudRateBox.addItem("38400", QSerialPort.Baud38400)
         self.m_ui.baudRateBox.addItem("115200", QSerialPort.Baud115200)
         self.m_ui.baudRateBox.addItem("Custom")
-        self.m_ui.baudRateBox.setCurrentIndex(1)
+        # self.m_ui.baudRateBox.setCurrentIndex(1)
  
         self.m_ui.dataBitsBox.addItem("5", QSerialPort.Data5)
         self.m_ui.dataBitsBox.addItem("6", QSerialPort.Data6)
         self.m_ui.dataBitsBox.addItem("7", QSerialPort.Data7)
         self.m_ui.dataBitsBox.addItem("8", QSerialPort.Data8)
-        self.m_ui.dataBitsBox.setCurrentIndex(3)
+        # self.m_ui.dataBitsBox.setCurrentIndex(3)
  
         self.m_ui.parityBox.addItem("None", QSerialPort.NoParity)
         self.m_ui.parityBox.addItem("Even", QSerialPort.EvenParity)
@@ -122,41 +123,38 @@ class SettingDialog(QDialog):
     
     def to_dict(self):
         return {
-           'baud_rate': self.m_currentSettings.baud_rate,
-           'dataBits':self.m_currentSettings.data_bits,
-           'Parity':self.m_currentSettings.parity,
-           'stopBits':self.m_currentSettings.stop_bits,
-           'flowControl':self.m_currentSet.flow_control
+           'baud_rate': self.m_ui.baudRateBox.currentText(),
+           'dataBits':self.m_ui.dataBitsBox.currentText(),
+           'Parity':self.m_ui.parityBox.currentText(),
+           'stopBits':self.m_ui.stopBitsBox.currentText(),
+           'flowControl':self.m_ui.flowControlBox.currentText()
         }
-    
-    def save_to_json(self, file_path='D:\\Project\\Project\\SWIFJ\\config'):
-        file_path=utils.get_config_path()
-        file_path=os.path.join(file_path,'uart.json')
-        data = self.to_dict()
-        with open(file_path, 'w') as f:
-            json.dump(data, f, indent=4)
-        crc32_value = utils.calculate_crc32(file_path)
 
     def checkParameter(self):
         uart_file=utils.get_config_path()
         file_uart=os.path.join(uart_file,'uart.json')
         if os.path.exists(file_uart):
-            print("文件存在")
-            crc32_value = utils.calculate_crc32(file_uart)
-            if not crc32_value:
-               self.fill_ports_parameters() 
-            else:
+            logger.debug('文件存在')
+            with open(file_uart, 'rb') as f:
+                value = json.load(f)
+            crc32_value = value['crc']
+            data = value['uart']
+            value_crc = utils.crc32_of_string(data)
+            logger.debug('value_crc',value_crc)
+            if crc32_value == value_crc:
                 with open(file_uart, 'r') as file:
                     data = json.load(file)  
-                print('-----------',data['baud_rate'])
-                self.m_ui.baudRateBox.addItem(str(data['baud_rate']))
-                self.m_ui.dataBitsBox.addItem(str(data['dataBits']))
-                self.m_ui.parityBox.addItem(str(data['Parity']))
-                self.m_ui.stopBitsBox.addItem(str(data['stopBits']))
-                self.m_ui.flowControlBox.addItem(str(data['flowControl']))
+                self.m_ui.baudRateBox.addItem(str(data['uart']['baud_rate']))
+                self.m_ui.dataBitsBox.addItem(str(data['uart']['dataBits']))
+                self.m_ui.parityBox.addItem(str(data['uart']['Parity']))
+                self.m_ui.stopBitsBox.addItem(str(data['uart']['stopBits']))
+                self.m_ui.flowControlBox.addItem(str(data['uart']['flowControl']))
+            else:
+                logger.debug('crc校验值不相等')
+                # self.fill_ports_parameters() 
         else:
-            print("文件不存在")
-            self.fill_ports_parameters()
+            logger.debug('文件不存在')
+            # self.fill_ports_parameters()
 
 
          

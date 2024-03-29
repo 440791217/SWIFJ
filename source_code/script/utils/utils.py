@@ -2,6 +2,7 @@ import binascii
 import zlib
 import os
 import platform
+import json
  
 def get_home_path():
     f=''
@@ -33,17 +34,22 @@ def get_config_path():
 # def getCWD():
     # return 
 
-def calculate_crc32(file_path):
-    # 打开文件并计算 CRC32 校验值
-    with open(file_path, 'rb') as file:
-        crc_value = 0
-        while True:
-            data = file.read(1024)  # 读取文件数据块
-            if not data:
-                break
-            crc_value = zlib.crc32(data, crc_value)  # 计算 CRC32 校验值
-    return crc_value
- 
+#crc字符串校验
+def crc32_of_string(data):
+    return zlib.crc32(json.dumps(data).encode('utf-8'))
+
+#保存串口数据和crc校验值文件
+def save_to_json(self, file_path):
+    file_path = get_config_path()
+    file_path = os.path.join(file_path,'uart.json')
+    data = self.to_dict()
+    crc_value = crc32_of_string(data)
+    with open(file_path, 'w') as f:
+        objdata={
+            "uart":data,
+            "crc":crc_value
+        }
+        json.dump(objdata, f ,indent=4)
 
 
 if __name__=='__main__':
