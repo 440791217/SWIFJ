@@ -2,6 +2,7 @@ import subprocess
 import time
 import os
 from loguru import logger
+from source_code.script.utils import utils
 
 
 
@@ -50,15 +51,15 @@ def open_gdb():
     return False
 
 
- 
+
+
 
 if __name__=='__main__':
-    if not open_gdb():
-        exit(-1)
+    # run_remote_connect()
     
     # print(os.getcwd().rfind('SWIFJ'))
     # print(os.path.abspath(__file__))
     # exit(0)
     # 运行GDB并获取输出
-    # gdb_output = test_run_gdb()
-    # print(gdb_output)
+    gdb_output = test_run_gdb()
+    print(gdb_output)

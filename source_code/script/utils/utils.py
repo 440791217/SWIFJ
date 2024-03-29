@@ -3,7 +3,10 @@ import zlib
 import os
 import platform
 import json
- 
+from loguru import logger
+import multiprocessing
+
+
 def get_home_path():
     f=''
     if platform.system() == "Windows":
@@ -20,19 +23,28 @@ def get_home_path():
         os.mkdir(home)   
     return home
 
+def get_dir_path(dir_path):
+    f=os.path.join(get_home_path(),dir_path)
+    if not os.path.exists(f):
+        os.mkdir(f)  
+    return f
+
+  
+def set_process_name(new_name):  
+    # 获取当前进程ID  
+    pid = os.getpid()  
+    # 设置进程名为新名称  
+    multiprocessing.current_process().name = new_name
+    
+    logger.debug(f"Process name changed to '{new_name}' (PID: {pid})")
 
 
 
 def crc32(data):
     return binascii.crc32(data) & 0xffffffff
 
-def get_config_path():
-    f=os.path.join(get_home_path(),'config')
-    if not os.path.exists(f):
-        os.mkdir(f)  
-    return f
-# def getCWD():
-    # return 
+
+
 
 #crc字符串校验
 def crc32_of_string(data):
@@ -40,7 +52,7 @@ def crc32_of_string(data):
 
 #保存串口数据和crc校验值文件
 def save_to_json(self, file_path):
-    file_path = get_config_path()
+    file_path = get_dir_path('config')
     file_path = os.path.join(file_path,'uart.json')
     data = self.to_dict()
     crc_value = crc32_of_string(data)

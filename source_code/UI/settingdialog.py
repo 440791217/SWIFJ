@@ -51,7 +51,7 @@ class SettingDialog(QDialog):
     def apply(self):
         self.update_settings()   #更新m_currentSettings值
         self.to_dict() 
-        file_path=utils.get_config_path()          #将配置写成字典
+        file_path=utils.get_dir_path('config')    
         utils.save_to_json(self,file_path)
         self.hide() 
 
@@ -131,7 +131,7 @@ class SettingDialog(QDialog):
         }
 
     def checkParameter(self):
-        uart_file=utils.get_config_path()
+        uart_file=utils.get_dir_path('config')
         file_uart=os.path.join(uart_file,'uart.json')
         if os.path.exists(file_uart):
             logger.debug('文件存在')
