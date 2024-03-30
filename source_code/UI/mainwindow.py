@@ -22,6 +22,8 @@ class MainWindow(QMainWindow):
         self.m_settingcon = Connect(self)#创建一个Connect实例
         self.m_ui.actionCon.triggered.connect(self.m_settingcon.show)
 
+        self.m_ui.actionAbout.triggered.connect(self.on_about)
+
         self.m_textEdit = QPlainTextEdit(self) 
         self.setCentralWidget(self.m_textEdit)   
  
@@ -35,6 +37,9 @@ class MainWindow(QMainWindow):
         self.m_ui.actionDisconnect.triggered.connect(self.close_serial_port)
         self.m_serial.readyRead.connect(self.read_data)
  
+    def on_about(self):
+        QMessageBox.about(self, '关于', '这是一个关于对话框示例')
+
     def open_serial_port(self):
         s = self.m_settings.setting()
         self.m_serial.setPortName(s.name)
