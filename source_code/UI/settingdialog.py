@@ -50,9 +50,13 @@ class SettingDialog(QDialog):
 
     def apply(self):
         self.update_settings()   #更新m_currentSettings值
-        self.to_dict() 
-        file_path=utils.get_dir_path('config')    
-        utils.save_to_json(self,file_path)
+        file_path=utils.get_dir_path('config')
+        file_path=os.path.join(file_path,'uart.json')
+        uart=self.to_dict()
+        data={
+            'uart':uart
+        }    
+        utils.save_to_json(data,file_path)
         self.hide() 
 
     def setting(self):
@@ -123,6 +127,7 @@ class SettingDialog(QDialog):
     
     def to_dict(self):
         return {
+           'com':self.m_ui.serialPortInfoListBox.currentText(),
            'baud_rate': self.m_ui.baudRateBox.currentText(),
            'dataBits':self.m_ui.dataBitsBox.currentText(),
            'Parity':self.m_ui.parityBox.currentText(),
@@ -138,17 +143,18 @@ class SettingDialog(QDialog):
             with open(file_uart, 'rb') as f:
                 value = json.load(f)
             crc32_value = value['crc']
-            data = value['uart']
+            data = value['data']
             value_crc = utils.crc32_of_string(data)
             logger.debug('value_crc',value_crc)
             if crc32_value == value_crc:
+                logger.debug('crc校验值相等')
                 with open(file_uart, 'r') as file:
                     data = json.load(file)  
-                self.m_ui.baudRateBox.addItem(str(data['uart']['baud_rate']))
-                self.m_ui.dataBitsBox.addItem(str(data['uart']['dataBits']))
-                self.m_ui.parityBox.addItem(str(data['uart']['Parity']))
-                self.m_ui.stopBitsBox.addItem(str(data['uart']['stopBits']))
-                self.m_ui.flowControlBox.addItem(str(data['uart']['flowControl']))
+                self.m_ui.baudRateBox.addItem(str(data['data']['uart']['baud_rate']))
+                self.m_ui.dataBitsBox.addItem(str(data['data']['uart']['dataBits']))
+                self.m_ui.parityBox.addItem(str(data['data']['uart']['Parity']))
+                self.m_ui.stopBitsBox.addItem(str(data['data']['uart']['stopBits']))
+                self.m_ui.flowControlBox.addItem(str(data['data']['uart']['flowControl']))
             else:
                 logger.debug('crc校验值不相等')
                 # self.fill_ports_parameters() 

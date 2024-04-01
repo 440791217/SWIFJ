@@ -51,14 +51,11 @@ def crc32_of_string(data):
     return zlib.crc32(json.dumps(data).encode('utf-8'))
 
 #保存串口数据和crc校验值文件
-def save_to_json(self, file_path):
-    file_path = get_dir_path('config')
-    file_path = os.path.join(file_path,'uart.json')
-    data = self.to_dict()
+def save_to_json(data, file_path):
     crc_value = crc32_of_string(data)
     with open(file_path, 'w') as f:
         objdata={
-            "uart":data,
+            "data":data,
             "crc":crc_value
         }
         json.dump(objdata, f ,indent=4)
