@@ -68,6 +68,7 @@ if __name__=='__main__':
     data1 = "Hello, World!".encode('utf-8')
     print(data1)
     desktop_path = get_home_path()
+    logger.debug('123123')
     # print(desktop_path)
     # checksum = crc32(data)
     # print(f"CRC-32: {checksum:#010x}")
