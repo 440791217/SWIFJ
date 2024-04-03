@@ -1,0 +1,666 @@
+tm
+start
+[New Thread 16756.0x60d8]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+start results None
+halt timeout 0
+halt results None
+hhhh results None
+resume
+Python Exception <class 'gdb.error'>: Cannot execute this command while the selected thread is running.
+[New Thread 16756.0x3464]
+[Switching to Thread 16756.0x3464]
+Quit (expect signal SIGINT when the program is resumed)
+Already logging to gdb.txt.
+Traceback (most recent call last):
+  File "F:\msys64/mingw32/share/gdb/python\gdb\__init__.py", line 149, in _execute_file
+    exec(compiled, globals, globals)
+  File "cmdline.py", line 243, in <module>
+    main()
+  File "cmdline.py", line 156, in main
+    logfle()
+  File "cmdline.py", line 45, in logfle
+    result=run(cmd=cmd)
+           ^^^^^^^^^^^^
+  File "cmdline.py", line 23, in run
+    result=gdb.execute(cmd)
+           ^^^^^^^^^^^^^^^^
+gdb.error: Undefined set logging command: "F://sudu//SWIFJ//source_code//script//gdb//debug//file gdb_log.txt".  Try "help set logging".
+Already logging to gdb.txt.
+Traceback (most recent call last):
+  File "F:\msys64/mingw32/share/gdb/python\gdb\__init__.py", line 149, in _execute_file
+    exec(compiled, globals, globals)
+  File "cmdline.py", line 243, in <module>
+    main()
+  File "cmdline.py", line 156, in main
+    logfle()
+  File "cmdline.py", line 45, in logfle
+    result=run(cmd=cmd)
+           ^^^^^^^^^^^^
+  File "cmdline.py", line 23, in run
+    result=gdb.execute(cmd)
+           ^^^^^^^^^^^^^^^^
+gdb.error: Undefined set logging command: "F://sudu//SWIFJ//source_code//script//gdb//debug//gdb_log.txt".  Try "help set logging".
+Already logging to gdb.txt.
+Undefined set logging command: "F://sudu//SWIFJ//source_code//script//gdb//debug//gdb_log.txt".  Try "help set logging".
+Undefined set logging command: "gdb_log.txt".  Try "help set logging".
+List of set logging subcommands:
+
+set logging debugredirect -- Set the logging debug output mode.
+set logging enabled -- Enable logging.
+set logging file -- Set the current logfile.
+set logging overwrite -- Set whether logging overwrites or appends to the log file.
+set logging redirect -- Set the logging output mode.
+
+Type "help set logging" followed by set logging subcommand name for full documentation.
+Type "apropos word" to search for commands related to "word".
+Type "apropos -v word" for full documentation of commands related to "word".
+Command name abbreviations are allowed if unambiguous.
+Continuing.
+[New Thread 16756.0x3b50]
+[Thread 16756.0x3464 exited with code 0]
+[Switching to Thread 16756.0x3b50]
+Already logging to gdb.txt.
+Traceback (most recent call last):
+  File "F:\msys64/mingw32/share/gdb/python\gdb\__init__.py", line 149, in _execute_file
+    exec(compiled, globals, globals)
+  File "cmdline.py", line 243, in <module>
+    main()
+  File "cmdline.py", line 156, in main
+    logfle()
+  File "cmdline.py", line 45, in logfle
+    result=run(cmd=cmd)
+           ^^^^^^^^^^^^
+  File "cmdline.py", line 23, in run
+    result=gdb.execute(cmd)
+           ^^^^^^^^^^^^^^^^
+gdb.error: Undefined item: "logging".
+Already logging to gdb.txt.
+tm
+start
+[New Thread 844.0x6458]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+start results None
+halt timeout 0
+halt results None
+hhhh results None
+resume
+Python Exception <class 'gdb.error'>: Cannot execute this command while the selected thread is running.
+[New Thread 844.0x23c4]
+[Switching to Thread 844.0x23c4]
+Quit (expect signal SIGINT when the program is resumed)
+Traceback (most recent call last):
+  File "F:\msys64/mingw32/share/gdb/python\gdb\__init__.py", line 149, in _execute_file
+    exec(compiled, globals, globals)
+  File "cmdline.py", line 246, in <module>
+    main()
+  File "cmdline.py", line 158, in main
+    run(cmd='set scheduler-locking on')
+  File "cmdline.py", line 25, in run
+    result=gdb.execute(cmd)
+           ^^^^^^^^^^^^^^^^
+gdb.error: Target 'native' cannot support this command.
+Target 'native' cannot support this command.
+Target 'native' cannot support this command.
+Already logging to gdb.txt.
+[New Thread 31708.0x687c]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+[New Thread 31708.0x6078]
+[Switching to Thread 31708.0x6078]
+Already logging to gdb.txt.
+`F:\sudu\SWIFJ\source_code\script\gdb\debug\hello.exe' has changed; re-reading symbols.
+Starting program: F:\sudu\SWIFJ\source_code\script\gdb\debug\hello.exe 
+[New Thread 10356.0x5634]
+[New Thread 10356.0x2fe4]
+
+Thread 3 received signal SIGINT, Interrupt.
+[Switching to Thread 10356.0x2fe4]
+0x75b18bec in KERNELBASE!CtrlRoutine () from C:\WINDOWS\SysWOW64\KernelBase.dll
+Already logging to gdb.txt.
+[New Thread 23924.0x79f0]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+[New Thread 23924.0x13d8]
+[Switching to Thread 23924.0x13d8]
+Quit (expect signal SIGINT when the program is resumed)
+start
+[New Thread 16664.0x796c]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+start results None
+halt timeout 0
+halt results None
+hhhh results None
+resume
+Python Exception <class 'gdb.error'>: Cannot execute this command while the selected thread is running.
+[New Thread 16664.0x7160]
+[Switching to Thread 16664.0x7160]
+Quit (expect signal SIGINT when the program is resumed)
+Quit (expect signal SIGINT when the program is resumed)
+start
+[New Thread 7640.0xd64]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+halt timeout 3.0177876629310325
+halt results None
+[New Thread 7640.0x573c]
+[Switching to Thread 7640.0x573c]
+start results None
+halt timeout 0
+halt results None
+hhhh results None
+resume
+[New Thread 7640.0x5204]
+[Thread 7640.0x573c exited with code 0]
+[Switching to Thread 7640.0x5204]
+resume result None
+resume
+resume result None
+[Thread 7640.0x5204 exited with code 0]
+[New Thread 7640.0x32a4]
+Quit (expect signal SIGINT when the program is resumed)
+[Switching to Thread 7640.0x32a4]
+Quit (expect signal SIGINT when the program is resumed)
+start
+[New Thread 26564.0x3e88]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+halt timeout 3.4172452568165483
+halt results None
+[New Thread 26564.0x25d0]
+[Switching to Thread 26564.0x25d0]
+start results None
+resume
+resume result None
+[Thread 26564.0x25d0 exited with code 0]
+[New Thread 26564.0x4648]
+Quit (expect signal SIGINT when the program is resumed)
+[Switching to Thread 26564.0x4648]
+Quit (expect signal SIGINT when the program is resumed)
+start
+[New Thread 8616.0x78b0]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+halt timeout 1.4956405226157705
+halt results None
+[New Thread 8616.0x4250]
+[Switching to Thread 8616.0x4250]
+start results None
+sleep
+sleep
+sleep
+Traceback (most recent call last):
+  File "F:\msys64/mingw32/share/gdb/python\gdb\__init__.py", line 149, in _execute_file
+    exec(compiled, globals, globals)
+  File "cmdline.py", line 244, in <module>
+    main()
+  File "cmdline.py", line 168, in main
+    time.sleep(1)
+KeyboardInterrupt
+start
+[New Thread 28384.0x2e50]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+halt timeout 1.7540862711442355
+halt results None
+[New Thread 28384.0x60a8]
+[Switching to Thread 28384.0x60a8]
+start results None
+sleep
+sleep
+sleep
+resume
+[Thread 28384.0x60a8 exited with code 0]
+[New Thread 28384.0x2cac]
+[Switching to Thread 28384.0x2cac]
+resume result None
+Traceback (most recent call last):
+  File "F:\msys64/mingw32/share/gdb/python\gdb\__init__.py", line 149, in _execute_file
+    exec(compiled, globals, globals)
+  File "cmdline.py", line 248, in <module>
+    main()
+  File "cmdline.py", line 169, in main
+    time.sleep(1)
+KeyboardInterrupt
+Quit (expect signal SIGINT when the program is resumed)
+start
+[New Thread 26604.0x7178]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+halt timeout 0.3679005430776955
+halt results None
+[New Thread 26604.0x69cc]
+[Switching to Thread 26604.0x69cc]
+start results None
+sleep
+sleep
+sleep
+resume
+halt timeout 2
+halt results None
+[Thread 26604.0x69cc exited with code 0]
+[New Thread 26604.0x27d0]
+[Switching to Thread 26604.0x27d0]
+resume result None
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+Traceback (most recent call last):
+  File "F:\msys64/mingw32/share/gdb/python\gdb\__init__.py", line 149, in _execute_file
+    exec(compiled, globals, globals)
+  File "cmdline.py", line 250, in <module>
+    main()
+  File "cmdline.py", line 169, in main
+    time.sleep(1)
+KeyboardInterrupt
+Quit (expect signal SIGINT when the program is resumed)
+Quit (expect signal SIGINT when the program is resumed)
+start
+[New Thread 14980.0x5fe4]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+halt timeout 3.0497839407815603
+halt results None
+[New Thread 14980.0x78b8]
+[Switching to Thread 14980.0x78b8]
+start results None
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+Traceback (most recent call last):
+  File "F:\msys64/mingw32/share/gdb/python\gdb\__init__.py", line 149, in _execute_file
+    exec(compiled, globals, globals)
+  File "cmdline.py", line 248, in <module>
+    main()
+  File "cmdline.py", line 169, in main
+    time.sleep(1)
+KeyboardInterrupt
+resume
+resume result None
+[New Thread 14980.0x531c]
+[Thread 14980.0x78b8 exited with code 0]
+[Switching to Thread 14980.0x531c]
+Quit (expect signal SIGINT when the program is resumed)
+start
+[New Thread 26936.0x6c04]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+halt timeout 1.376230257411521
+halt results None
+[New Thread 26936.0x3fe4]
+[Switching to Thread 26936.0x3fe4]
+start results None
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+sleep
+Traceback (most recent call last):
+  File "F:\msys64/mingw32/share/gdb/python\gdb\__init__.py", line 149, in _execute_file
+    exec(compiled, globals, globals)
+  File "cmdline.py", line 248, in <module>
+    main()
+  File "cmdline.py", line 169, in main
+    time.sleep(1)
+KeyboardInterrupt
+resume
+Python Exception <class 'NameError'>: name 'result' is not defined
+Quit (expect signal SIGINT when the program is resumed)
+start
+[New Thread 13840.0x23a8]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+halt timeout 2.459379903904168
+halt results None
+[New Thread 13840.0x1754]
+[Switching to Thread 13840.0x1754]
+start results None
+sleep
+sleep
+sleep
+sleep
+Traceback (most recent call last):
+  File "F:\msys64/mingw32/share/gdb/python\gdb\__init__.py", line 149, in _execute_file
+    exec(compiled, globals, globals)
+  File "cmdline.py", line 248, in <module>
+    main()
+  File "cmdline.py", line 169, in main
+    time.sleep(1)
+KeyboardInterrupt
+resume
+Python Exception <class 'NameError'>: name 'result' is not defined
+Quit (expect signal SIGINT when the program is resumed)
+start
+[New Thread 16836.0x5438]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+halt timeout 0.20341079546947305
+Python Exception <class 'gdb.error'>: Cannot execute this command while the selected thread is running.
+start results None
+sleep
+sleep
+sleep
+sleep
+Traceback (most recent call last):
+  File "F:\msys64/mingw32/share/gdb/python\gdb\__init__.py", line 149, in _execute_file
+    exec(compiled, globals, globals)
+  File "cmdline.py", line 249, in <module>
+    main()
+  File "cmdline.py", line 170, in main
+    time.sleep(1)
+KeyboardInterrupt
+[New Thread 16836.0x6724]
+resume
+Python Exception <class 'NameError'>: name 'result' is not defined
+[Switching to Thread 16836.0x6724]
+Quit (expect signal SIGINT when the program is resumed)
+halt timeout 1.7104241678714098
+start
+[New Thread 31340.0x52c0]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+halt results None
+[New Thread 31340.0x3de0]
+[Switching to Thread 31340.0x3de0]
+start results None
+halt timeout 0.9707362980541379
+start
+[New Thread 18896.0x5260]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+halt results None
+[New Thread 18896.0x5fc0]
+[Switching to Thread 18896.0x5fc0]
+start results None
+halt timeout 5
+halt results None
+Quit (expect signal SIGINT when the program is resumed)
+Quit (expect signal SIGINT when the program is resumed)
+halt timeout 3.631823489080277
+start
+[New Thread 9180.0x47f0]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+halt results None
+[New Thread 9180.0x6040]
+[Switching to Thread 9180.0x6040]
+start results None
+halt timeout 5
+resume
+Traceback (most recent call last):
+  File "F:\msys64/mingw32/share/gdb/python\gdb\__init__.py", line 149, in _execute_file
+    exec(compiled, globals, globals)
+  File "cmdline.py", line 252, in <module>
+    main()
+  File "cmdline.py", line 169, in main
+    resume()
+  File "cmdline.py", line 130, in resume
+    print('resume result',result)
+                          ^^^^^^
+NameError: name 'result' is not defined. Did you mean: 'resume'?
+halt results None
+Quit (expect signal SIGINT when the program is resumed)
+Quit (expect signal SIGINT when the program is resumed)
+halt timeout 1.9007037000578602
+start
+[New Thread 10968.0x37c0]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+halt results None
+[New Thread 10968.0x74c4]
+[Switching to Thread 10968.0x74c4]
+start results None
+halt timeout 5
+resume
+resume result continue
+halt results None
+Quit (expect signal SIGINT when the program is resumed)
+Quit (expect signal SIGINT when the program is resumed)
+halt timeout 2.518636526531778
+start
+[New Thread 23728.0x4f28]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+halt results None
+[New Thread 23728.0x53cc]
+[Switching to Thread 23728.0x53cc]
+start results None
+resume
+resume result continue
+halt timeout 1.8198888118297614
+start
+[New Thread 28292.0x2bc4]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+halt results None
+[New Thread 28292.0x21dc]
+[Switching to Thread 28292.0x21dc]
+start results None
+resume
+[Thread 28292.0x21dc exited with code 0]
+[New Thread 28292.0x23a0]
+[Switching to Thread 28292.0x23a0]
+resume result None
+halt timeout 2.26992340849017
+start
+[New Thread 31384.0x5034]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+halt results None
+[New Thread 31384.0x69c4]
+[Switching to Thread 31384.0x69c4]
+start results None
+halt timeout 5
+resume
+[Thread 31384.0x69c4 exited with code 0]
+halt results None
+[New Thread 31384.0x1f40]
+[Switching to Thread 31384.0x1f40]
+resume result None
+halt timeout 1.4790849637733605
+start
+[New Thread 29388.0x4ec4]
+warning: platform-specific solib_create_inferior_hook did not load initial shared libraries.
+Reading symbols from C:\WINDOWS\SysWOW64\ntdll.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\ntdll.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\kernel32.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\kernel32.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\KernelBase.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\KernelBase.dll)
+Reading symbols from C:\WINDOWS\SysWOW64\msvcrt.dll...
+(No debugging symbols found in C:\WINDOWS\SysWOW64\msvcrt.dll)
+halt results None
+[New Thread 29388.0xab0]
+[Switching to Thread 29388.0xab0]
+start results None
+halt timeout 5
+resume
+[Thread 29388.0xab0 exited with code 0]
+halt results None
+[New Thread 29388.0x7320]
+[Switching to Thread 29388.0x7320]
+resume result None
+halt timeout 5
+resume
+[Thread 29388.0x7320 exited with code 0]
+halt results None
+[New Thread 29388.0x1734]
+[Switching to Thread 29388.0x1734]
+resume result None

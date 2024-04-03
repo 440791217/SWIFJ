@@ -3,8 +3,10 @@ import sys
 import random
 import time
 import threading
+import logging
 from source_code.script.gdb.register import *
 
+logging.basicConfig(filename='F://sudu//SWIFJ//source_code//script//gdb//debug//gdb_log.txt', level=logging.INFO)
 
 
 INFO_REGISTER='info register'
@@ -38,6 +40,12 @@ def confirm(**args):
     result=run(cmd=cmd)
     return result 
 
+def logfle(**args):
+    cmd='set logging on'
+    result=run(cmd=cmd)
+    cmd='set logging file F://sudu//SWIFJ//source_code//script//gdb//debug//gdb_log.txt'
+    result=run(cmd=cmd)
+    return result
 
 def get(**args):
     name=args['name']
@@ -97,36 +105,76 @@ def bit_flip(**args):
 #     return
 def start(**args):
     cmd='{}'.format('r')
+    print('start')
     result=run(cmd=cmd)
-    print('start',result)
-    print('213123')
+    print('start results',result)
     return result
 
 def halt(**args):
-    time.sleep(5)
+    if 'timeout' in args:
+        timeout=args['timeout']
+    else:
+        timeout=0
     cmd='{}'.format('interrupt')
+    # cmd='{}'.format('signal SIGSTOP')
+    print('halt timeout',timeout)
+    time.sleep(timeout)
     result=run(cmd=cmd)
-    print('halt',result)
+    print('halt results',result)
     return result
 
 def resume(**args):
+    print('resume')
     cmd='{}'.format('continue')
     result=run(cmd=cmd)
-    print('resume',result)
+    print('resume result',result)
     return result
 
+def dummy(**args):
+    if 'timeout' in args:
+        timeout=args['timeout']
+    else:
+        timeout=0
+    time.sleep(timeout)
+    print('dummy')
+
+def post_task(task):
+    gdb.post_event(task)
+    
 
 def main():
+    inj_times=1000
+    exe_timeout=5
+    ##初始化，关闭干扰操作
     confirm()
     verbose()
     pagination()
+    # run(cmd='set scheduler-locking on')
+    # logfle()
+    # gdb.post_event(start)
+    # print('tm')
+    # th1 = threading.Thread(target=main_th)
+    # th1.start()
+    # gdb.write('start\n')
 
-##设置随机定时器
-    timeout=random.uniform(0, 1)*5
-    gdb.post_event(halt)
-    start()
-    gdb.post_event(halt)
-    resume()
+    for i in range(inj_times):
+        # ##设置随机定时器
+        timeout=random.random()*exe_timeout
+        isr=lambda:halt(timeout=timeout)
+        th1 = threading.Thread(target=isr)
+        th1.start()
+        # gdb.post_event(isr)
+        start()
+        isr=lambda:halt(timeout=1)
+        th1 = threading.Thread(target=isr)
+        th1.start()
+        resume()
+        isr=lambda:halt(timeout=1)
+        th1 = threading.Thread(target=isr)
+        th1.start()
+        resume()
+
+
     return 0
 
 # 定义一个函数，用于作为线程的执行体
