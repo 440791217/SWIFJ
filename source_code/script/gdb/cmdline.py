@@ -6,7 +6,7 @@ import threading
 import logging
 from source_code.script.gdb.register import *
 
-logging.basicConfig(filename='F://sudu//SWIFJ//source_code//script//gdb//debug//gdb_log.txt', level=logging.INFO)
+logging.basicConfig(filename='F://sudu//SWIFJ//source_code//script//gdb//debug//gdb_log.log', level=logging.INFO)
 
 
 INFO_REGISTER='info register'
@@ -173,8 +173,6 @@ def main():
         th1 = threading.Thread(target=isr)
         th1.start()
         resume()
-
-
     return 0
 
 # 定义一个函数，用于作为线程的执行体
