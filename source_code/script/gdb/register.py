@@ -1,5 +1,3 @@
-import yaml
-
 TEST_ARCH=[
     {'name': 'eax', 'width': 32}, 
     {'name': 'ecx', 'width': 32},
