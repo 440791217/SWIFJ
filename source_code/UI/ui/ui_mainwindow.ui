@@ -33,6 +33,7 @@
    <addaction name="actionQuit"/>
    <addaction name="actionFault"/>
    <addaction name="actionCon"/>
+   <addaction name="actionMode"/>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -49,15 +50,11 @@
     </property>
     <addaction name="actionCon"/>
     <addaction name="actionFault"/>
-   </widget>
-   <widget class="QMenu" name="menu_2">
-    <property name="title">
-     <string>关于</string>
-    </property>
+    <addaction name="actionConfigure"/>
+    <addaction name="actionMode"/>
     <addaction name="actionAbout"/>
    </widget>
    <addaction name="menu"/>
-   <addaction name="menu_2"/>
   </widget>
   <action name="actionConfigure">
    <property name="icon">
@@ -116,6 +113,15 @@
   <action name="actionAbout">
    <property name="text">
     <string>关于</string>
+   </property>
+  </action>
+  <action name="actionMode">
+   <property name="icon">
+    <iconset>
+     <normaloff>../images/mode.png</normaloff>../images/mode.png</iconset>
+   </property>
+   <property name="text">
+    <string>故障注入模式</string>
    </property>
   </action>
  </widget>

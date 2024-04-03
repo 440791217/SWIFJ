@@ -22,14 +22,14 @@ class Settings():
         self.string_flow_control = ""
         self.local_echo_enabled = False
 
-class Settingtest():
-    def __init__(self):
-        self.name = ""
-        self.baud_rate = 0
-        self.data_bits = QSerialPort.Data8
-        self.parity = QSerialPort.NoParity
-        self.stop_bits =  QSerialPort.OneStop
-        self.flow_control = QSerialPort.SoftwareControl
+# class Settingtest():
+#     def __init__(self):
+#         self.name = ""
+#         self.baud_rate = 0
+#         self.data_bits = QSerialPort.Data8
+#         self.parity = QSerialPort.NoParity
+#         self.stop_bits =  QSerialPort.OneStop
+#         self.flow_control = QSerialPort.SoftwareControl
 
 
 class SettingDialog(QDialog):
@@ -38,7 +38,7 @@ class SettingDialog(QDialog):
         self.m_ui = Ui_Dialog()
         self.m_ui.setupUi(self) 
         self.m_currentSettings = Settings() #m_currentSettings初始化
-        self.m_currentSet = Settingtest() #m_currentSet初始化,主页点击打开串口的配置
+        # self.m_currentSet = Settingtest() #m_currentSet初始化,主页点击打开串口的配置
         print("hello World")
         self.checkParameter()#检查本地是否有串口的配置文件
 
@@ -117,13 +117,13 @@ class SettingDialog(QDialog):
         self.m_currentSettings.flow_control = self.m_ui.flowControlBox.currentData()
         self.m_currentSettings.string_flow_control = self.m_ui.flowControlBox.currentText()    
          
-    def update_setting(self):
-        self.m_currentSet.name = self.m_ui.serialPortInfoListBox.currentText()
-        self.m_currentSet.baud_rate = self.m_ui.baudRateBox.currentData()
-        self.m_currentSet.data_bits = self.m_ui.dataBitsBox.currentData()
-        self.m_currentSet.parity = self.m_ui.parityBox.currentData()
-        self.m_currentSet.stop_bits = self.m_ui.stopBitsBox.currentData()
-        self.m_currentSet.flow_control = self.m_ui.flowControlBox.currentData()
+    # def update_setting(self):
+    #     self.m_currentSet.name = self.m_ui.serialPortInfoListBox.currentText()
+    #     self.m_currentSet.baud_rate = self.m_ui.baudRateBox.currentData()
+    #     self.m_currentSet.data_bits = self.m_ui.dataBitsBox.currentData()
+    #     self.m_currentSet.parity = self.m_ui.parityBox.currentData()
+    #     self.m_currentSet.stop_bits = self.m_ui.stopBitsBox.currentData()
+    #     self.m_currentSet.flow_control = self.m_ui.flowControlBox.currentData()
     
     def to_dict(self):
         return {
