@@ -20,26 +20,26 @@ class MainWindow(QMainWindow):
         self.m_ui.setupUi(self)
 
         self.m_serial = QSerialPort(self)
-        self.m_settings = SettingDialog(self)
+        self.m_settings = SettingDialog(self)#创建一个SettingDialog实例，创建串口配置界面
 
-        self.m_settingfault = SettingFault(self)#创建一个SettingDialog实例，故障注入参数设置
+        self.m_settingfault = SettingFault(self)#创建一个SettingFault实例，故障注入参数设置
         self.m_ui.actionFault.triggered.connect(self.m_settingfault.show)
 
-        self.m_settingcon = Connect(self)#创建一个Connect实例
+        self.m_settingcon = Connect(self)#创建一个设备连接Connect实例
         self.m_ui.actionCon.triggered.connect(self.m_settingcon.show)
 
         self.m_settingmode = Mode(self)#创建故障注入模式选择的页面
         self.m_ui.actionMode.triggered.connect(self.m_settingmode.show)
 
-        self.m_ui.actionAbout.triggered.connect(self.on_about)#关于按钮
+        self.m_ui.actionAbout.triggered.connect(self.on_about)#创建关于按钮
 
         self.m_textEdit = QPlainTextEdit(self) 
         self.setCentralWidget(self.m_textEdit)   
  
-        self.m_ui.actionConnect.setEnabled(True)
-        self.m_ui.actionDisconnect.setEnabled(False)
-        self.m_ui.actionQuit.setEnabled(True)
-        self.m_ui.actionConfigure.setEnabled(True)
+        self.m_ui.actionConnect.setEnabled(True)#启动打开串口状态
+        self.m_ui.actionDisconnect.setEnabled(False)#关闭串口状态
+        self.m_ui.actionQuit.setEnabled(True)#清除按钮
+        self.m_ui.actionConfigure.setEnabled(True)#串口配置按钮状态
  
         self.m_ui.actionConfigure.triggered.connect(self.m_settings.show)
         self.m_ui.actionConnect.triggered.connect(self.open_serial_port)
