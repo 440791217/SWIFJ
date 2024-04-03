@@ -6,6 +6,7 @@ from ui.ui_mainwindow import Ui_MainWindow
 from settingdialog import SettingDialog
 from fault_injection import SettingFault
 from connect import Connect
+from fault_mode import Mode
 from PyQt5.QtSerialPort import QSerialPort
 from PyQt5.QtCore import QIODevice
 from source_code.script.utils import utils
@@ -21,13 +22,16 @@ class MainWindow(QMainWindow):
         self.m_serial = QSerialPort(self)
         self.m_settings = SettingDialog(self)
 
-        self.m_settingfault = SettingFault(self)#创建一个SettingDialog实例
+        self.m_settingfault = SettingFault(self)#创建一个SettingDialog实例，故障注入参数设置
         self.m_ui.actionFault.triggered.connect(self.m_settingfault.show)
 
         self.m_settingcon = Connect(self)#创建一个Connect实例
         self.m_ui.actionCon.triggered.connect(self.m_settingcon.show)
 
-        self.m_ui.actionAbout.triggered.connect(self.on_about)
+        self.m_settingmode = Mode(self)#创建故障注入模式选择的页面
+        self.m_ui.actionMode.triggered.connect(self.m_settingmode.show)
+
+        self.m_ui.actionAbout.triggered.connect(self.on_about)#关于按钮
 
         self.m_textEdit = QPlainTextEdit(self) 
         self.setCentralWidget(self.m_textEdit)   
